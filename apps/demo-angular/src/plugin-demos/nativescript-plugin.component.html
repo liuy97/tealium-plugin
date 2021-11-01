@@ -1,0 +1,35 @@
+<ActionBar title="tealium" class="action-bar"> </ActionBar>
+<StackLayout class="p-20">
+	<ScrollView class="h-full">
+		<StackLayout>
+            <Label row="1" text="Initialize" textWrap="true"></Label>
+            <Label row="1" text="" textWrap="true"></Label>
+            <Button text="Initialize SDK" (tap)="demoShared.init()" class="btn btn-primary"></Button>
+            <Button text="Terminate SDK Instance" tap="demoShared.terminate()" class="btn btn-primary"></Button>
+            <Label row="1" text="" textWrap="true"></Label>
+            <Label row="1" text="Consent" textWrap="true"></Label>
+            <Button text="Consent - Opt In" (tap)="demoShared.optIn()" class="btn btn-primary"></Button>
+            <Button text="Consent - Opt Out" (tap)="demoShared.optOut()" class="btn btn-primary"></Button>
+            <Button text="Consent - Set Random Categories" (tap)="demoShared.setRandomConsentCategories()" class="btn btn-primary"></Button>
+            <Button text="Consent - Get Status" (tap)="demoShared.getConsentStatus()" class="btn btn-primary"></Button>
+            <Button text="Consent - Get Categories" (tap)="demoShared.getConsentCategories()" class="btn btn-primary"></Button>
+            <Label row="1" text="" textWrap="true" ></Label>
+            <Label row="1" text="Track" textWrap="true" ></Label>
+            <Button text="Track Event" (tap)="demoShared.trackEvent()" class="btn btn-primary"></Button>
+            <Button text="Track View" (tap)="demoShared.trackView()" class="btn btn-primary"></Button>
+            <Button text="Add Data" (tap)="demoShared.addData()" class="btn btn-primary"></Button>
+            <Button text="Remove Data" (tap)="demoShared.removeData()" class="btn btn-primary"></Button>
+            <Button text="Get Data" (tap)="demoShared.getData()" class="btn btn-primary"></Button>
+            <Label row="1" text="" textWrap="true"></Label>
+            <Label row="1" text="Remote Commands" textWrap="true" ></Label>
+            <Button text="Add Remote Command" (tap)="demoShared.addRemoteCommand()" class="btn btn-primary"></Button>
+            <Button text="Remove Remote Command" (tap)="demoShared.removeRemoteCommand()" class="btn btn-primary"></Button>
+            <Label row="1" text="Visitor Service" textWrap="true" ></Label>
+            <Button text="Set Visitor Service Listener" (tap)="demoShared.setVisitorServiceListener()" class="btn btn-primary"></Button>
+            <Button text="Remove Visitor Service Listener" (tap)="demoShared.removeVisitorServiceListener()" class="btn btn-primary"></Button>
+            <Label row="1" text="Trace" textWrap="true" ></Label>
+            <TextField [test]="traceId" hint="Enter Trace ID" (returnPress)="demoShared.joinTrace(traceId)" returnKeyType="done"></TextField>
+            <Button text="Leave Trace" (tap)="demoShared.joinTrace(traceId)" class="btn btn-primary"></Button>
+          </StackLayout>
+	</ScrollView>
+</StackLayout>

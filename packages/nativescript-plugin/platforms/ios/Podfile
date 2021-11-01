@@ -1,0 +1,1 @@
+pod 'TealiumNativescriptWrapper', :path => '../../node_modules/@tealium/nativescript-plugin/platforms/ios/TealiumNativescriptWrapper/'
